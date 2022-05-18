@@ -45,4 +45,4 @@ for sor in lista:
     if len(sor[2]) == 5:
         szulev = int(sor[2][1:4])
         print(sor[1],2022 - szulev)
-        222
+        
