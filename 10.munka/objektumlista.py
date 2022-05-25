@@ -1,5 +1,6 @@
 #osztály létrehozása
 #bekérés
+print("_-_-_-_1 F E L A D A T_-_-_-_")
 class Haromszog:
     a: int
     b: int
@@ -28,6 +29,7 @@ class Haromszog:
             pass
 #függvény lezárása
 #File beolvasása
+print("_-_-_-_2 F E L A D A T_-_-_-_")
 file = open('haromszog.txt','r',)
 #lista létrehozása
 lista = []
@@ -39,6 +41,7 @@ for sor in file:
 #kiiratás
 print(lista)
 #A kerulet() metódus segítségével írasd ki az egyes háromszögek kerületét.
+print("_-_-_-_3 F E L A D A T_-_-_-_")
 def kerulet(self)-> int            :
         return self.a + self.b + self.c
 def d ():
@@ -46,25 +49,41 @@ def d ():
 #Az osztálynak már vannak kész metódusai. 
 #A haromszoge() metódus segítségével írasd ki listasoronként, 
 #hogy háromszöget alkotnak-e a számok.
+print("_-_-_-_4 F E L A D A T_-_-_-_")
 for item in lista:
     print(item)
     egyHaromszog = Haromszog(item)
 #A lista minden eleméből példányosíts egy egyHaromszog nevű,
 # Haromszog típusú objektumot.
-class Triangle:
-    
-  def __init__(self, angle1, angle2, angle3):
-    haromszogoldala = 3
+print("_-_-_-_5 F E L A D A T_-_-_-_")
+for item in lista:
+      print(item)
+      egyHaromszog = Haromszog(item)
+      print(egyHaromszog.haromszoge())
+      print(egyHaromszog.kerulet())
 
-  def check_angles(self):
-    if self.a + self.b + self.c == 180:
-      return True
-    else: 
-      return False
+#1) Kérj be a felhasználótól 3 számot(megfelelő adatszerkezetben), 
+#majd írd ki neki, hogy háromszöget alkot e!
+#egy logikai érték,ami megmondja hogy a háromszög derékszögű e
+print("_-_-_-_6 F E L A D A T_-_-_-_")
+lista_haromszog = []
+for i in range(3):
+      szam : int = int(input("Kérem adjon meg egy számot!"))
+      lista_haromszog.append(szam)
+teljesharomszog = Haromszog(lista_haromszog)
+print(teljesharomszog.haromszoge())
 
-my_triangle = Triangle(90, 30, 60)
+def kerulet(self) -> int:
+    return self.a + self.b +self.c
 
-print(my_triangle.haromszogoldal)
-print(my_triangle.check_angles)
+def derekszogu(self) -> bool:
+    return self.a*self.a + self.b*self.b + self.c*self.c
+
+      
 
 
+
+#if a<b+c and b <a+c and c<a+b:
+#	print("Háromszöget alkot!")
+#else:
+#print("Nem alkot háromszöget!")
